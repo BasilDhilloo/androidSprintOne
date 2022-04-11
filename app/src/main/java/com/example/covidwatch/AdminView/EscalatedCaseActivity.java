@@ -41,7 +41,7 @@ public class EscalatedCaseActivity extends AppCompatActivity {
         userArrayList=new ArrayList<ResourceModel>();
         adapter = new resourceAdapter(userArrayList,getApplicationContext());
 
-        db.collection("users")
+        db.collection("users").whereEqualTo("Escalated","Yes")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {

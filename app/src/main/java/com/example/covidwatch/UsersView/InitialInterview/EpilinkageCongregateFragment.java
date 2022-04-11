@@ -99,6 +99,7 @@ public class EpilinkageCongregateFragment extends Fragment {
         SharedPreferences sh = this.getActivity().getSharedPreferences("MySharedPref", Context.MODE_PRIVATE);
         String uuid = sh.getString("uuid","");
 
+
         db.collection("users").document(uuid).collection("Epilinkage Page")
                 .document(uuid).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
@@ -110,6 +111,7 @@ public class EpilinkageCongregateFragment extends Fragment {
                 additionalInformation.setText(documentSnapshot.getString("Additional Info"));
             }
         });
+
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -120,6 +122,7 @@ public class EpilinkageCongregateFragment extends Fragment {
                 epilinkage.put("Congregate Name",schoolName.getText().toString());
                 epilinkage.put("Additional Info",additionalInformation.getText().toString());
 
+                db.collection("users").document(uuid).update("Escalated", closeContact.getText().toString());
                 db.collection("users").document(uuid).collection("Epilinkage Page").document(uuid)
                         .set(epilinkage).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
