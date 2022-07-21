@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UsersView.InitialInterview.TestingTreatment.TreatmentFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="10dp">
+    <RelativeLayout
+        android:id="@+id/medicalinfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtSoughtMedicalCare"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:hint="Did you sought COVID-19 medical care?"
+            android:textColor="@color/primary_color"
+            android:textColorHint="@color/primary_color"
+            android:theme="@style/Theme.CovidWatch">
+
+            <AutoCompleteTextView
+                android:id="@+id/edtSoughtMedicalCare"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="5"
+                android:background="@color/lightgrey"
+                android:clickable="true"
+                android:completionThreshold="5"
+                android:ems="10"
+                android:textSize="16dp"
+                android:theme="@style/Theme.CovidWatch"
+                tools:ignore="KeyboardInaccessibleWidget" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtReceivedMedicalCare"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Covid Treatment Received"
+            android:layout_below = "@id/txtSoughtMedicalCare"
+            android:textColor="@color/primary_color"
+            android:textColorHint="@color/primary_color"
+            android:textSize="16dp"
+            android:theme="@style/Theme.CovidWatch">
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/edtReceivedMedicalCare"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="5"
+                android:background="@color/lightgrey"
+                android:clickable="true"
+                android:gravity="top"
+                android:completionThreshold="5"
+                android:ems="10"
+                android:textSize="16dp"
+
+                android:theme="@style/Theme.CovidWatch"
+                tools:ignore="KeyboardInaccessibleWidget" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtHospitalization"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below = "@id/txtReceivedMedicalCare"
+            android:hint="Did you ever or still hospitalized??"
+            android:textColor="@color/primary_color"
+            android:textSize="16dp"
+            android:textColorHint="@color/primary_color"
+            android:theme="@style/Theme.CovidWatch">
+
+            <AutoCompleteTextView
+                android:id="@+id/edtHospitalization"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="5"
+                android:background="@color/lightgrey"
+                android:clickable="true"
+                android:completionThreshold="5"
+                android:ems="10"
+                android:textSize="16dp"
+
+                android:theme="@style/Theme.CovidWatch"
+                tools:ignore="KeyboardInaccessibleWidget" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtAdmissionDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtHospitalization"
+            android:layout_margin="4dp"
+            android:background="@color/lightgrey"
+            android:hint=" Admission date"
+            android:textSize="16dp"
+            android:textColor="@color/primary_color"
+            android:textColorHint="@color/primary_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtAdmissionDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="16dp"
+                android:textColor="@color/primary_color" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/calAdmissionDate"
+            android:layout_below="@id/txtHospitalization"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignRight="@+id/txtAdmissionDate"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="10dp"
+            android:tint="@color/red_color"
+            tools:ignore="UseAppTint"
+            android:background="@color/lightgrey"
+            android:scaleType="fitCenter"
+            android:textSize="16dp"
+            android:src="@drawable/cal1"
+             />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtDischargeDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAdmissionDate"
+            android:layout_margin="4dp"
+            android:background="@color/lightgrey"
+            android:hint=" Discharge Date"
+            android:textSize="16dp"
+            android:textColor="@color/primary_color"
+            android:textColorHint="@color/primary_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDischargeDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="16dp"
+                android:textColor="@color/primary_color" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/calDischargeDate"
+            android:layout_below="@id/txtAdmissionDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignRight="@+id/txtAdmissionDate"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/lightgrey"
+            android:scaleType="fitCenter"
+            android:tint="@color/red_color"
+            tools:ignore="UseAppTint"
+            android:src="@drawable/cal1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtHospitalName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDischargeDate"
+            android:layout_margin="4dp"
+            android:background="@color/lightgrey"
+            android:hint=" Hospital Name"
+            android:textSize="16dp"
+            android:textColor="@color/primary_color"
+            android:textColorHint="@color/primary_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtHospitalName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="16dp"
+                android:textColor="@color/primary_color" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtDescTreatmentReceived"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtHospitalName"
+            android:layout_margin="4dp"
+            android:background="@color/lightgrey"
+            android:gravity="top"
+            android:textSize="16dp"
+            android:hint=" Describe Treatment Received"
+            android:textColor="@color/primary_color"
+            android:textColorHint="@color/primary_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDescTreatmentReceived"
+                android:layout_width="fill_parent"
+                android:gravity="top"
+                android:textSize="16dp"
+                android:layout_height="100dp"
+                android:inputType="text"
+                android:maxLines="10"
+                android:textColor="@color/primary_color" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:layout_below="@+id/txtDescTreatmentReceived"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/red_color"
+                android:text="Save" />
+
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/saveButton"
+                android:backgroundTint="@color/red_color"
+                android:onClick="btn_next"
+                android:text="cancel" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+
+
+
+</FrameLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UsersView.InitialInterview.EpilinkageCongregateFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:theme="@style/Theme.CovidWatch"
+                android:id="@+id/txtCloseContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Known Close Contact With Covid?"
+                android:textColor="@color/primary_color"
+                android:textColorHint="@color/primary_color">
+                <AutoCompleteTextView
+                    android:id="@+id/edtCloseContact"
+                    android:layout_width="match_parent"
+                    android:theme="@style/Theme.CovidWatch"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/caseName"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_weight="5"
+                    android:ems="10"
+                    android:background="@color/lightgrey"
+                    android:clickable="true"
+                    android:completionThreshold="5"
+                    android:textSize="16dp"
+                    tools:ignore="KeyboardInaccessibleWidget" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtAdditionalInfoCongregate"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txtCloseContact"
+                android:background="@color/lightgrey"
+                android:hint="Close Contact Additional Info"
+                android:text=""
+                android:textColorHint="@color/primary_color"
+                android:textSize="16sp"
+                app:hintTextColor="@color/primary_color">
+
+                <AutoCompleteTextView
+                    android:id="@+id/edtAdditionalInfoCongregate"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/lightgrey"
+                    android:textColor="@color/primary_color"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:theme="@style/Theme.CovidWatch"
+                android:id="@+id/txtCongregateSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Congregate/School Setting?"
+                android:layout_below="@+id/txtAdditionalInfoCongregate"
+                android:textColor="@color/primary_color"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/primary_color">
+                <AutoCompleteTextView
+                    android:id="@+id/edtCongregateSetting"
+                    android:layout_width="match_parent"
+                    android:theme="@style/Theme.CovidWatch"
+                    android:layout_height="55dp"
+                    android:layout_weight="5"
+                    android:ems="10"
+                    android:background="@color/lightgrey"
+                    android:clickable="true"
+                    android:completionThreshold="5"
+                    android:textSize="16dp"
+                    tools:ignore="KeyboardInaccessibleWidget" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtMonitoringType"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/lightgrey"
+                android:hint="Congregate/School Name"
+                android:layout_below="@+id/txtCongregateSetting"
+                android:text=""
+                android:textColorHint="@color/primary_color"
+                android:textSize="16sp"
+                app:hintTextColor="@color/primary_color">
+
+                <AutoCompleteTextView
+                    android:id="@+id/edtMonitoringTypeAuto"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/lightgrey"
+                    android:textColor="@color/primary_color"
+                    android:padding="5dp"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtAdditionalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txtMonitoringType"
+                android:background="@color/lightgrey"
+                android:hint="Additional Info"
+                android:text=""
+                android:textColorHint="@color/primary_color"
+                android:textSize="12sp"
+                app:hintTextColor="@color/primary_color">
+
+                <AutoCompleteTextView
+                    android:id="@+id/edtAdditionalInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@color/lightgrey"
+                    android:textColor="@color/primary_color"
+                    android:padding="5dp"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="390dp"
+                android:backgroundTint="@color/red_color"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="390dp"
+                android:layout_marginRight="60dp"
+                android:backgroundTint="@color/red_color"
+                android:text="Save" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>
+

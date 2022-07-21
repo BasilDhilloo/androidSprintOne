@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:background="@color/white"
+    tools:context=".UsersView.UserDashboardActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/userbackgroundd"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+           android:layout_marginTop="10dp"
+           >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="0dp"
+                android:fontFamily="@font/belleza"
+                android:text="Good Morning,"
+                android:textAlignment="center"
+                android:textColor="@color/red_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/titl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_toRightOf="@+id/title"
+                android:text="Ridham"
+                android:textStyle="bold"
+                android:textColor="@color/red_color"
+                android:textSize="25dp" />
+        </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="15dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            app:cardElevation="15dp"
+            android:onClick="btn_initialInterview"
+            android:id="@+id/initialInterview">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/circle_yellow"
+                    android:src="@drawable/ic_newrecord"
+                    android:padding="10dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightgrey"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Initial Interview"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/textColor" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            app:cardElevation="15dp"
+            android:onClick="btn_assessment"
+            android:id="@+id/assessment"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/circle_grayn"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_viewrecord"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightgrey"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Health Assessment"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/textColor" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_margin="5dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            app:cardElevation="15dp"
+            android:onClick="btn_vaccine"
+            android:id="@+id/Vaccinespot"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/circle_blue"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_baseline_vaccine_services_24"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightgrey"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vaccine Clinic"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/textColor" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:layout_marginTop="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            app:cardBackgroundColor="@color/lightgrey"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/hands">
+
+            <TextView
+                android:id="@+id/txtDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/belleza"
+                android:layout_marginStart="40dp"
+                android:text="2 DAYS"
+                android:textColor="@color/primary_color"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtMon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDays"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/primary_color"
+            android:layout_marginStart="100dp"
+            android:text="left to complete monitoring"
+            android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtMon"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="145dp"
+                android:textColor="@color/primary_color"
+                android:text="Stay Strong, Together we can beat COVID-19!"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

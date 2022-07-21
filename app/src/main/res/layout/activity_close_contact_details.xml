@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingHorizontal="10dp"
+tools:context=".UsersView.InitialInterview.Location.CloseContactDetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="900dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="smAddress"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/txtCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/checkbox"
+            android:text="Same Address"
+            android:textColor="@color/textColor"
+            android:textSize="24sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/txtFirstName"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkbox"
+            android:layout_margin="4dp"
+            android:hint="First Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtFirstName"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLastName"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/txtFirstName"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="Last Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtEmailId"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/txtLastName"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="Email ID">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEmailId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/txtDob"
+            android:layout_below="@+id/txtEmailId"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="Date of Birth">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtDob"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/calDob"
+            android:tint="@color/red_color"
+            tools:ignore="UseAppTint"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="fitCenter"
+            android:background="@color/lightgrey"
+            android:src="@drawable/cal1"
+            android:layout_below="@+id/txtEmailId"
+            android:onClick="setDate"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtGender"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/txtDob"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="Gender">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtContactNo"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/txtGender"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="Phone Number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtContactNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:id="@+id/txtAddressType"
+            android:background="@color/lightgrey"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/txtContactNo"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="Address Type">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/edtAddressType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                tools:ignore="KeyboardInaccessibleWidget" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtApartment"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/txtAddressType"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="Apartment/House Number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtApartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/txtStreet"
+            android:layout_below="@+id/txtApartment"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="Street">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtStreet"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtCity"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/txtStreet"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="City">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtAdditionalInfo"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/txtCity"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:hint="Additional Info">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtAdditionalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnAddContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAdditionalInfo"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/red_color"
+            android:text="Add Contact" />
+
+    </RelativeLayout>
+
+</ScrollView>

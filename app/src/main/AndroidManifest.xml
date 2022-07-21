@@ -4,25 +4,17 @@
 
     <application
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label=""
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CovidWatch">
         <activity
-            android:name=".SecurityQuestionActivity"
+            android:name=".UsersView.UserDashboardActivity$MapActivity"
             android:exported="false" />
         <activity
-            android:name=".AddRecord2Activity"
-            android:exported="true" />
-        <activity
-            android:name=".AddRecordActivity"
-            android:exported="true" />
-        <activity
-            android:name=".AdminDashboard"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,6 +22,69 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AdminView.CreateUser.CreateMedicalInformationActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity
+            android:name=".AdminView.CreateUser.CreateAddressActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity
+            android:name=".AdminView.CreateUser.CreatePersonalInfomationActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity
+            android:name=".UsersView.InitialInterview.Demographic.CaseInformationCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UsersView.InitialInterview.InitialInterviewActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".UsersView.InitialInterview.Location.CloseContactDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UsersView.InitialInterview.Location.AddIsolationLocationactivity"
+            android:exported="false" />
+        <activity
+            android:name=".UsersView.DailyHealth.DailyHealthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UsersView.UserDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminView.PersonalInfoActivity"
+            android:exported="true"
+            android:label="Personal Information" />
+        <activity
+            android:name=".AdminView.ResourceRequestCaseActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AdminView.ViewRecord.ViewRecordActivity"
+            android:exported="true"
+            android:label="View Record"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".AdminView.EscalatedCaseActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AdminView.SecurityQuestionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".AdminView.AdminDashboard"
+            android:exported="false"
+            android:label="Admin DashBoard" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

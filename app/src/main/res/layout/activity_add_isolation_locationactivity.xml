@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:id="@+id/addLocationActivity"
+        android:paddingHorizontal="10dp"
+        tools:context=".UsersView.InitialInterview.Location.AddIsolationLocationactivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1100dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/txtLocationNameA"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="Location Name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtLocationName"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtLocationType"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/txtLocationNameA"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="Location Type">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtLocationType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtApartment"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/txtLocationType"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="Apartment/House/Office">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtApartment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/txtStreet"
+                android:layout_below="@+id/txtApartment"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="Street">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtStreet"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtCity"
+                android:layout_width="185dp"
+                android:layout_below="@+id/txtStreet"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="City">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtCity"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+
+                android:id="@+id/txtProvince"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtStreet"
+                android:layout_marginStart="300dp"
+                android:layout_margin="4dp"
+                android:layout_toRightOf="@id/txtCity"
+                android:hint="Province">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/edtProvince"
+                    android:layout_width="185dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txtGender" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+
+                android:id="@+id/txtCountry"
+                android:layout_width="185dp"
+                android:layout_below="@+id/txtCity"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="Country">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/edtCountry"
+                    android:layout_width="185dp"
+                    android:clickable="true"
+                    tools:ignore="KeyboardInaccessibleWidget"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtZipCode"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtCity"
+                android:layout_marginStart="300dp"
+                android:layout_margin="4dp"
+                android:layout_toRightOf="@id/txtCountry"
+                android:hint="Zipcode">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtZipcode"
+                    android:layout_width="185dp"
+                    android:layout_marginStart="7dp"
+                    android:clickable="true"
+                    tools:ignore="KeyboardInaccessibleWidget"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txtCountry" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/txtFromDate"
+                android:layout_below="@+id/txtCountry"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="From Date">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtFromDate"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/txtToDate"
+                android:layout_below="@+id/txtFromDate"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="To Date">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtToDate"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/txtHouseHoldAdults"
+                android:layout_below="@+id/txtToDate"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="# Household Adults">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtHouseHoldAdults"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/txtHouseHoldKids"
+                android:layout_below="@+id/txtHouseHoldAdults"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="# Household Kids">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtHouseHoldKids"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:id="@+id/txtIsolationCheck"
+                android:background="@color/lightgrey"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/txtHouseHoldKids"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="Are you able to isolate safely ?">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/edtIsolateCheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    tools:ignore="KeyboardInaccessibleWidget" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/txtinstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtIsolationCheck"
+                android:text="Do you have following in your home ?"
+                android:textSize="18sp"
+                android:textColor="@color/textColor"
+                android:layout_marginTop="10dp"
+                />
+
+            <CheckBox
+                android:id="@+id/checkbox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtinstruction"
+                android:layout_marginRight="10dp"
+                android:background="@color/white" />
+            <TextView
+                android:id="@+id/txtCheckbox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A separate room for sleeping and Daily Activities Where you can stay away from other house mates"
+                android:textSize="12sp"
+                android:textColor="@color/textColor"
+                android:layout_below="@+id/txtinstruction"
+
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/checkbox1"
+                />
+            <CheckBox
+                android:id="@+id/checkbox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkbox1"
+                android:layout_marginRight="10dp"
+                android:background="@color/white" />
+            <TextView
+                android:id="@+id/txtCheckbox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A separate bathroom for use or if not, ability for you or some one to clean after each use."
+                android:textSize="12sp"
+                android:textColor="@color/textColor"
+                android:layout_below="@+id/checkbox1"
+
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/checkbox2"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtAdditionalInfo"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/checkbox2"
+                android:layout_height="100dp"
+                android:layout_margin="4dp"
+                android:hint="Additional Info">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtAdditionalInfo"
+                    android:layout_height="100dp"
+
+                    android:layout_width="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnAddLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtAdditionalInfo"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/red_color"
+                android:text="Add Location" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
